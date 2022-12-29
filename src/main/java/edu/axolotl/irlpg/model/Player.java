@@ -1,21 +1,20 @@
 package edu.axolotl.irlpg.model;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import jakarta.persistence.Entity;
+
+import java.util.*;
 
 public class Player {
     private String name;
     private SkillTree skillTree;
     private RewardTree rewardTree;
-    private Map<String,Stat> stats;
+    private List<Stat> stats;
 
     public Player(String name) {
         this.name = name;
         this.skillTree = new SkillTree();
         this.rewardTree = new RewardTree();
-        this.stats = new HashMap<>();
+        this.stats = new ArrayList<>();
     }
 
     public String getName() {
